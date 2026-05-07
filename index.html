@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Screenshots Gallery — Competitors</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f0f13;
+    color: #e0e0e6;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 40px 32px 32px;
+    border-bottom: 1px solid #ffffff18;
+  }
+  header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+  header p { margin-top: 8px; color: #8888aa; font-size: 14px; }
+  .badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: #5c5cff22;
+    border: 1px solid #5c5cff55;
+    color: #9d9dff;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+  }
+
+  main { max-width: 1600px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  .category { margin-bottom: 60px; }
+  .cat-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #5c5cff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff12;
+  }
+
+  .app-card {
+    background: #16161f;
+    border: 1px solid #ffffff0e;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #1c1c28;
+    border-bottom: 1px solid #ffffff0e;
+  }
+  .app-name { font-weight: 600; font-size: 15px; color: #d0d0e8; }
+  .app-count { font-size: 12px; color: #666680; }
+
+  .screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px;
+  }
+  .img-wrap {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .img-wrap img {
+    display: block;
+    height: 220px;
+    width: auto;
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 1px solid #ffffff12;
+  }
+  .img-wrap img:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 40px #00000088;
+  }
+  .img-label {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    background: #000000aa;
+    color: #ffffffbb;
+    padding: 2px 7px;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+
+  /* Modal */
+  #modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000000ee;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  #modal.open { display: flex; }
+  #modal img {
+    max-height: 92vh;
+    max-width: 92vw;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px #000;
+  }
+  #modal-close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+  }
+  #modal-close:hover { opacity: 1; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Competitors Screenshot Gallery</h1>
+  <p>Маркетинговые скриншоты из App Store · данные: iTunes Search API</p>
+  <span class="badge">234 скриншотов · 20 приложений</span>
+</header>
+
+<main>
+
+  <section class="category">
+    <h2 class="cat-title">Контентные wellness-платформы</h2>
+    
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Calm</span>
+        <span class="app-count">6 iPhone · 6 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Calm/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Headspace Sleep & Meditation</span>
+        <span class="app-count">8 iPhone · 10 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_08.jpg" loading="lazy" alt="ipad_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_09.jpg" loading="lazy" alt="ipad_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Headspace Sleep & Meditation/ipad_10.jpg" loading="lazy" alt="ipad_10.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Insight Timer Meditate, Sleep</span>
+        <span class="app-count">9 iPhone · 9 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/iphone_09.jpg" loading="lazy" alt="iphone_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_08.jpg" loading="lazy" alt="ipad_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Insight Timer Meditate, Sleep/ipad_09.jpg" loading="lazy" alt="ipad_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Aura Meditation & Sleep, CBT</span>
+        <span class="app-count">8 iPhone · 8 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Aura Meditation & Sleep, CBT/ipad_08.jpg" loading="lazy" alt="ipad_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Better Sleep</span>
+        <span class="app-count">10 скриншотов</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5735.PNG" loading="lazy" alt="IMG_5735.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5736.PNG" loading="lazy" alt="IMG_5736.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5737.PNG" loading="lazy" alt="IMG_5737.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5738.PNG" loading="lazy" alt="IMG_5738.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5739.PNG" loading="lazy" alt="IMG_5739.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5740.PNG" loading="lazy" alt="IMG_5740.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5741.PNG" loading="lazy" alt="IMG_5741.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5742.PNG" loading="lazy" alt="IMG_5742.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5743.PNG" loading="lazy" alt="IMG_5743.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Better Sleep/IMG_5744.PNG" loading="lazy" alt="IMG_5744.PNG" onclick="openModal(this.src)">
+              
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">TIDE Sleep, Focus, Meditation</span>
+        <span class="app-count">8 iPhone · 7 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/TIDE Sleep, Focus, Meditation/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+  </section>
+  <section class="category">
+    <h2 class="cat-title">Функциональный аудио-wellness</h2>
+    
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Endel</span>
+        <span class="app-count">8 скриншотов</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5745.PNG" loading="lazy" alt="IMG_5745.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5746.PNG" loading="lazy" alt="IMG_5746.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5747.PNG" loading="lazy" alt="IMG_5747.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5748.PNG" loading="lazy" alt="IMG_5748.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5749.PNG" loading="lazy" alt="IMG_5749.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5750.PNG" loading="lazy" alt="IMG_5750.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5751.PNG" loading="lazy" alt="IMG_5751.PNG" onclick="openModal(this.src)">
+              
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Endel/IMG_5752.PNG" loading="lazy" alt="IMG_5752.PNG" onclick="openModal(this.src)">
+              
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Brain.fm Focus & Sleep Music</span>
+        <span class="app-count">7 iPhone · 7 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Brain.fm Focus & Sleep Music/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Noisli</span>
+        <span class="app-count">5 iPhone · 5 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Noisli/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Rain Rain Sleep Sounds</span>
+        <span class="app-count">7 iPhone · 7 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Rain Rain Sleep Sounds/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+  </section>
+  <section class="category">
+    <h2 class="cat-title">Anti-scroll / Attention control</h2>
+    
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Opal Screen Time Control</span>
+        <span class="app-count">9 iPhone · 0 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Opal Screen Time Control/iphone_09.jpg" loading="lazy" alt="iphone_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">one sec screen time + focus</span>
+        <span class="app-count">0 iPhone · 9 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_08.jpg" loading="lazy" alt="ipad_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/one sec screen time + focus/ipad_09.jpg" loading="lazy" alt="ipad_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Freedom Screen Time Control</span>
+        <span class="app-count">10 iPhone · 4 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_09.jpg" loading="lazy" alt="iphone_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/iphone_10.jpg" loading="lazy" alt="iphone_10.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Freedom Screen Time Control/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Forest Focus for Productivity</span>
+        <span class="app-count">8 iPhone · 0 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Forest Focus for Productivity/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Stay Focused AppSite Blocker</span>
+        <span class="app-count">0 iPhone · 6 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Stay Focused AppSite Blocker/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Stay Focused AppSite Blocker/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Stay Focused AppSite Blocker/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Stay Focused AppSite Blocker/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Stay Focused AppSite Blocker/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Stay Focused AppSite Blocker/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+  </section>
+  <section class="category">
+    <h2 class="cat-title">Experience-first / Immersive</h2>
+    
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Loóna Sleep, reduce anxiety</span>
+        <span class="app-count">9 iPhone · 9 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/iphone_09.jpg" loading="lazy" alt="iphone_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_08.jpg" loading="lazy" alt="ipad_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Loóna Sleep, reduce anxiety/ipad_09.jpg" loading="lazy" alt="ipad_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Portal - Escape Into Nature</span>
+        <span class="app-count">10 iPhone · 6 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_09.jpg" loading="lazy" alt="iphone_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/iphone_10.jpg" loading="lazy" alt="iphone_10.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Portal - Escape Into Nature/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-header">
+        <span class="app-name">Mesmerize - Visual Meditation</span>
+        <span class="app-count">10 iPhone · 9 iPad</span>
+      </div>
+      <div class="screenshots">
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_01.jpg" loading="lazy" alt="iphone_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_02.jpg" loading="lazy" alt="iphone_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_03.jpg" loading="lazy" alt="iphone_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_04.jpg" loading="lazy" alt="iphone_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_05.jpg" loading="lazy" alt="iphone_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_06.jpg" loading="lazy" alt="iphone_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_07.jpg" loading="lazy" alt="iphone_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_08.jpg" loading="lazy" alt="iphone_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_09.jpg" loading="lazy" alt="iphone_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/iphone_10.jpg" loading="lazy" alt="iphone_10.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPhone</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_01.jpg" loading="lazy" alt="ipad_01.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_02.jpg" loading="lazy" alt="ipad_02.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_03.jpg" loading="lazy" alt="ipad_03.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_04.jpg" loading="lazy" alt="ipad_04.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_05.jpg" loading="lazy" alt="ipad_05.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_06.jpg" loading="lazy" alt="ipad_06.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_07.jpg" loading="lazy" alt="ipad_07.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_08.jpg" loading="lazy" alt="ipad_08.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+            <div class="img-wrap">
+              <img src="app_screenshots/Mesmerize - Visual Meditation/ipad_09.jpg" loading="lazy" alt="ipad_09.jpg" onclick="openModal(this.src)">
+              <span class="img-label">iPad</span>
+            </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="modal" onclick="closeModal()">
+  <span id="modal-close" onclick="closeModal()">&times;</span>
+  <img id="modal-img" src="" alt="">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById('modal-img').src = src;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
